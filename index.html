@@ -7,8 +7,24 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<div id="root">
-			<h1>Namaste React</h1>
+		<div id="container">
+			
 		</div>
+        <script>
+            
+            // creating the h1 element (object) using document
+            const heading = document.createElement("h1");
+
+            // setting the content of this element
+
+            heading.innerHTML = "Namaste React";
+
+            // get the access to container/root/parent under which you want to insert this element as child
+
+            const container = document.getElementById("container");
+            container.appendChild(heading)
+
+
+        </script>
 	</body>
 </html>
