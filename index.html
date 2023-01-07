@@ -5,26 +5,23 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<script
+			crossorigin
+			src="https://unpkg.com/react@18/umd/react.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+		></script>
 	</head>
 	<body>
-		<div id="container">
-			
-		</div>
-        <script>
-            
-            // creating the h1 element (object) using document
-            const heading = document.createElement("h1");
-
-            // setting the content of this element
-
-            heading.innerHTML = "Namaste React";
-
-            // get the access to container/root/parent under which you want to insert this element as child
-
-            const container = document.getElementById("container");
-            container.appendChild(heading)
-
-
-        </script>
+		<div id="container"></div>
+		<script>
+			const heading = React.createElement('h1', {}, 'Namaste React')
+			console.log(heading)
+			const container = ReactDOM.createRoot(
+				document.getElementById('container')
+			)
+		</script>
 	</body>
 </html>
